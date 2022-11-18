@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+Add New Item
+{% endblock title %}
+
+{% block body %}
+<form action="addrecord/" method="post">
+    {% csrf_token %}
+<div class="container-fluid">
+    <div class="con-fluid mx-0">
+        <img src="static/food1.jpg" class="d-block w-100 my-0 " alt="...">
+       
+            <h5 style="position: absolute;
+            top: 150px;
+            left: 80px;
+            color: white;
+            font-size: 35px">ADD FOOD ITEM</h5>
+    </div>
+    <div class="mb-3 row my-2">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Food Item:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="Enter Food Item" name="name">
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Price:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputPassword "placeholder="Enter The Price" name="price">
+        </div>
+    </div>
+    <div class="mb-3 row ">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Quantity:</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputPassword" placeholder="Enter The Quantity" name="quantity">
+        </div>
+    </div>
+</div>
+<center>
+    <input class="btn btn-primary" type="submit" value="Submit">
+</center>
+</form>
+{%endblock body%}
